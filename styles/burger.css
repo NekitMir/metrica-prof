@@ -1,0 +1,168 @@
+.header {
+    position: relative;
+}
+
+.body_fixed {
+    overflow: hidden;
+}
+
+.img__burger {
+    display: block;
+    position: absolute;
+    right: 0;
+}
+
+.img__burger-inner {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+.burger {
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+
+    background: rgb(0, 0, 0, 0.7);
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.burger_open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.burger__content {
+    width: 40%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.logo__burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 88px 88px 50px 30px;
+}
+
+.navigation__burger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+
+.burger__link-nav {
+    padding-bottom: 20px;
+}
+
+.burger__link-nav-end {
+    padding-bottom: 90px;
+}
+
+.burger-btn {
+    display: none;
+}
+
+
+/*Footer-Burger*/
+
+.burger__container {
+    display: flex;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.footer__burger-text {
+    padding-bottom: 23px;
+
+    font-size: 16px;
+    line-height: 22px;
+
+    opacity: .5;
+}
+
+.footer__contact-phone {
+    display: inline-block;
+    padding-bottom: 19px;
+
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.footer__contact-mail {
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.footer__contact-phone:hover,
+.footer__contact-mail:hover {
+    opacity: .5;
+}
+
+
+/*Media*/
+
+
+@media (max-width: 767px) {
+    .navigation {
+        display: none;
+    }
+
+    .burger-btn {
+        display: block;
+        position: absolute;
+        background-image: url("../images/open-burger.svg");
+        background-repeat: no-repeat;
+        margin-top: 30px;
+        width: 30px;
+        height: 30px;
+        z-index: 10;
+        right: 0;
+        top: 0;
+
+        border: none;
+        /*border: 3px solid black;*/
+        background-color: #ffffff;
+    }
+
+    .burger-btn_open {
+        background-image: url("../images/close-btn.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+    }
+
+    .burger__content {
+        width: 35%;
+    }
+}
+
+@media (max-width: 600px) {
+    .burger__content {
+        width: 40%;
+    }
+}
+
+@media (max-width: 500px) {
+    .burger__content {
+        width: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    .burger__content {
+        width: 60%;
+    }
+}
